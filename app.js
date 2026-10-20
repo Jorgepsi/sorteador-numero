@@ -3,8 +3,15 @@ function sortear() {
     let de = parseInt(document.getElementById('de').value);
     let ate = parseInt(document.getElementById('ate').value);
 
-    let numero = obterNumeroAleatorio(de, ate);
-    alert(numero);
+    let sorteados = [];
+    let numero;
+
+    for (let i = 0; i < quantidade; i++) {
+        numero = obterNumeroAleatorio(de, ate);
+        sorteados.push(numero);
+    }
+
+    alert(sorteados);
 }
 
 function obterNumeroAleatorio(min, max) {
